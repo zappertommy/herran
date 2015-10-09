@@ -1,0 +1,12 @@
+<div class="slider">
+  <div class="slide" data-ng-repeat="image in images" data-ng-show="image.visible">
+    <img data-ng-src="/img/content/{{ image.src }}" alt="{{ image.title }}" />
+    <div class="hb-img-circle">
+      <img src="/img/layout/slide_photo_circle.png" alt="" />
+      <span>{{ image.title }}</span>
+    </div>
+  </div>
+  <div class="hb-slider-point">
+    <span class="slide-circle{{ $index }}" data-ng-class="{ active : $first }" data-ng-repeat="image in images" data-ng-click="goPic($index)">&nbsp;</span>
+  </div>
+</div>

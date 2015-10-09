@@ -1,0 +1,48 @@
+<div class="container" ng-controller="productsController">
+  <div class="container col-sm-4">
+    <div class="products-menu-block">
+      <img src="/img/layout/products_menu.png" />
+      <div class="product-main">
+        <div ng-class="active_menu == 'bread' ? 'menus active' : 'menus'" ng-click="go('/products/bread')" id="menuBread">
+          <img src="/img/layout/products_menu_bread.png" />
+          <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('bread')"></div>
+        </div>
+        <div ng-class="active_menu == 'cakes' ? 'menus active' : 'menus'" ng-click="go('/products/cakes')" id="menuCakes">
+          <img src="/img/layout/products_menu_cakes.png" />
+          <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('cakes')"></div>
+        </div>
+        <div ng-class="active_menu == 'chinese_deli' ? 'menus active' : 'menus'" ng-click="go('/products/chinese_deli')" id="menuChineseDeli">
+          <img src="/img/layout/products_menu_chinese_deli.png" />
+          <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('chinese-deli')"></div>
+        </div>
+        <div ng-class="active_menu == 'hopia' ? 'menus active' : 'menus'" ng-click="go('/products/hopia')" id="menuHopia">
+          <img src="/img/layout/products_menu_hopia.png" />
+          <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('hopia')"></div>
+        </div>
+        <div ng-class="active_menu == 'pastries' ? 'menus active' : 'menus'" ng-click="go('/products/pastries')" id="menuPastries">
+          <img src="/img/layout/products_menu_pastries.png" />
+          <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('pastries')"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legends">
+      <div class="recomm">
+        <span class="pic-box text-center">
+          <img src="/img/layout/products_star.png" />
+        </span>
+        <span>Recommendation</span>
+      </div>
+      <div class="best">
+        <span class="pic-box text-center">
+          <img src="/img/layout/products_circle.png" />
+        </span>
+        <span>Best Seller</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="container col-sm-8">
+    <div data-ng-include="'/templates/partials/products-section.html'" data-ng-controller="itemsController" data-ng-init="init('bread')"></div>
+  </div>
+</div>

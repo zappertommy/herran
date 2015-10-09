@@ -1,0 +1,28 @@
+<div class="products-items">
+  <ul>
+    <li data-ng-repeat="item in items" data-ng-if="item.type == item_type">
+      <img ng-class="getSrcSlug(item.src) == item_slug ? 'cover selected' : 'cover hide'" src="/img/layout/product_frame_selected.png" />
+      <img src="/img/content/thumb/{{ item.pic }}" />
+      <div class="item-details">
+        <div class="top-block">
+          <span class="hints">
+            <span ng-class="item.hint == 3 || item.hint == 1 ? 'pic-box text-center' : 'hide'"><img src="/img/layout/products_star.png" /></span>
+            <span ng-class="(item.hint == 3 ? 'pic-box sec text-center' : (item.hint == 2 ? 'pic-box text-center' : 'hide'))"><img src="/img/layout/products_circle.png" /></span>
+          </span>
+          <span class="name">{{ item.title }}</span>
+        </div>
+        <div class="mid-block text-right">
+          <span class="price">{{ item.price }}</span>
+        </div>
+        <div class="btm-block text-right">
+          <span class="facebook">
+            <img src="img/layout/social_facebook.png" />
+          </span>
+          <span class="twitter">
+            <img src="img/layout/social_twitter.png" />
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

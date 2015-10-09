@@ -1,0 +1,91 @@
+<div class="container" ng-controller="formController">
+  <div class="page-lbl">
+    <span>Feedback</span>
+  </div>
+  <div id="contactMessage" class="container right-space hide">
+    <div class="alert alert-success right-gap text-center">Success</div>
+  </div>
+  <form name="contactForm" ng-submit="submitForm()" novalidate>
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        <span class="frm-req">*</span>
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <span class="frm-lbl">Name:</span>
+      </div>
+    </div>
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        &nbsp;
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <input class="frm-field" type="text" name="contact_name" ng-model="contact.name" required />
+      </div>
+    </div>
+
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        <span class="frm-req">*</span>
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <span class="frm-lbl">Email Address:</span>
+      </div>
+    </div>
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        &nbsp;
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <input class="frm-field" type="email" name="contact_email" ng-model="contact.email" required />
+      </div>
+    </div>
+
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        <span class="frm-req">&nbsp;</span>
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <span class="frm-lbl">Contact Number:</span>
+      </div>
+    </div>
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        &nbsp;
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <input class="frm-field" type="text" name="contact_number" ng-model="contact.number" />
+      </div>
+    </div>
+
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        <span class="frm-req">&nbsp;</span>
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <span class="frm-lbl">Comments:</span>
+      </div>
+    </div>
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        &nbsp;
+      </div>
+      <div class="container col-xs-10 text-left left-space">
+        <textarea class="frm-field" name="contact_comment" rows="7" ng-model="contact.comment"></textarea>
+      </div>
+    </div>
+
+    <div class="container right-space bottom-gap-20">
+      <div class="container col-xs-2 text-right no-padding-right">
+        &nbsp;
+      </div>
+      <div class="container col-xs-7 text-left left-space">
+        <span class="frm-req-note">* Required Fields</span>
+      </div>
+      <div class="container col-xs-3 text-right">
+        <input class="frm-btn" type="submit" value="Submit" />
+
+        <input class="frm-btn" type="reset" value="Reset" ng-disabled="contactForm.$invalid" />
+      </div>
+    </div>
+  </form>
+</div>

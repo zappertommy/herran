@@ -1,0 +1,29 @@
+<div class="promo">
+  <div class="container col-sm-9">
+    <img class="outer-box" src="/img/layout/promo_box.png" alt="" />
+    <div class="inner-box">
+      <div class="nav-block prev" data-ng-click="moveLeft()">
+        <img class="arrow" src="/img/layout/promo_prev.png" alt="" />
+      </div>
+      <div class="promos">
+        <ul>
+          <li data-ng-repeat="image in images">
+            <img data-ng-src="/img/content/{{ image.src }}" alt="{{ image.title }}" newplace />
+          </li>
+        </ul>
+      </div>
+      <div class="nav-block next" data-ng-click="moveRight()">
+        <img class="arrow" src="/img/layout/promo_next.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="obar-container container col-sm-3 hidden-xs">
+    <div class="obar-container-inner">
+      <div class="obar-lbl text-center">WHAT'S NEW?</div>
+      <div class="obar-img">
+        <img class="promo-obar" src="/img/layout/promo_obar.png" alt="">
+      </div>
+      <div class="obar-lbl text-center">PROMOS</div>
+    </div>
+  </div>
+</div>
