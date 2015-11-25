@@ -1,5 +1,5 @@
 <ul>
-  <li data-ng-repeat="menu in product_menus" data-ng-if="menu.type == product_type">
-    <a href="#/{{ menu.src }}">{{ menu.title }}</a>
+  <li data-ng-repeat="menu in product_menus" data-ng-if="menu.type == product_type" data-ng-click="hideDropdown()">
+    <a href="#/{{menu.src}}">{{ menu.title }}</a>
   </li>
 </ul>

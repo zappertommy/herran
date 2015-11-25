@@ -18,6 +18,7 @@
   <script src="/js/angular.min.js"></script>
   <script src="/js/angular-route.min.js"></script>
   <script src="/js/angular-animate.min.js"></script>
+  <script src="/js/angular-touch.min.js"></script>
   <script src="/js/lodash.compat.min.js"></script>
   <script src="/js/bluebird.js"></script>
   <script src="/js/angular-google-maps.min.js"></script>
@@ -30,7 +31,7 @@
 </head>
 <body>
   <div data-ng-include="'/templates/partials/header-logo.html'"></div>
-  <div data-ng-include="'/templates/partials/header-menu.html'"></div>
+  <div data-ng-include="'/templates/partials/header-menu.html'" data-ng-controller="headerController"></div>
   <div data-ng-include="'/templates/partials/slider.html'"></div>
   <div class="container">
     <div data-ng-view=""></div>

@@ -10,7 +10,7 @@
       <a href="#/news"><img src="/img/layout/menu_news.png" /></a>
     </li>
     <li class="text-center dropdown">
-      <img class="dropdown-toggle hb-menu" data-toggle="dropdown" data-target=".hb-menu-drop" src="/img/layout/menu_products.png" />
+      <img class="dropdown-toggle hb-menu" data-ng-click="toggleDropdown()" src="/img/layout/menu_products.png" />
       <div class="hb-menu-drop">
         <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('header')"></div>
       </div>

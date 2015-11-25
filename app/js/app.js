@@ -5,6 +5,7 @@
 angular.module('hbApp', [
   'ngRoute',
   'ngAnimate',
+  'ngTouch',
   'google-maps'.ns(),
   'hbApp.filters',
   'hbApp.services',

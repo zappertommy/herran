@@ -3,6 +3,12 @@
 /* Controllers */
 
 angular.module('hbApp.controllers', [])
+  .controller('headerController', ['$scope', function($scope) {
+
+    $scope.toggleDropdown = function () {
+      $('.hb-menu-drop').toggleClass('open');
+    }
+  }])
   .controller('menuController', ['$scope', '$location','productsFactory', function($scope, $location, productsFactory) {
     $scope.product_menus = [];
     $scope.product_type = '';
@@ -10,6 +16,10 @@ angular.module('hbApp.controllers', [])
     $scope.init = function(type){
       $scope.product_menus = productsFactory.getProducts();
       $scope.product_type = type;
+    }
+
+    $scope.hideDropdown = function () {
+      $('.hb-menu-drop').removeClass('open');
     }
   }])
   .controller('homeController', ['$scope', 'sliderFactory', function($scope, sliderFactory) {
