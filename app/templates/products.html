@@ -1,4 +1,9 @@
 <div class="container" ng-controller="productsController">
+  <a name="/products/bread"></a>
+  <a name="/products/cakes"></a>
+  <a name="/products/chinese-deli"></a>
+  <a name="/products/hopia"></a>
+  <a name="/products/pastries"></a>
   <div class="container col-sm-4">
     <div class="products-menu-block">
       <img src="/img/layout/products_menu.png" />
@@ -11,7 +16,7 @@
           <img src="/img/layout/products_menu_cakes.png" />
           <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('cakes')"></div>
         </div>
-        <div ng-class="active_menu == 'chinese_deli' ? 'menus active' : 'menus'" ng-click="go('/products/chinese_deli')" id="menuChineseDeli">
+        <div ng-class="active_menu == 'chinese-deli' ? 'menus active' : 'menus'" ng-click="go('/products/chinese-deli')" id="menuChineseDeli">
           <img src="/img/layout/products_menu_chinese_deli.png" />
           <div data-ng-include="'/templates/partials/products-menu.html'" data-ng-controller="menuController" data-ng-init="init('chinese-deli')"></div>
         </div>

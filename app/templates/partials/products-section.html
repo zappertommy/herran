@@ -1,6 +1,7 @@
 <div class="products-items">
   <ul>
     <li data-ng-repeat="item in items" data-ng-if="item.type == item_type">
+      <a name="/{{item.src}}"></a>
       <img ng-class="getSrcSlug(item.src) == item_slug ? 'cover selected' : 'cover hide'" src="/img/layout/product_frame_selected.png" />
       <img src="/img/content/thumb/{{ item.pic }}" />
       <div class="item-details">
